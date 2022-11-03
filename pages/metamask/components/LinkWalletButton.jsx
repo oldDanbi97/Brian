@@ -10,13 +10,14 @@ const LinkWalletButton = () => {
     deactivate
   } = useWeb3React();
   const handleConnect = () => {
+    console.log(process.env.NEXT_PUBLIC_DEEP_LINK)
     if (active) {
       deactivate();
       console.log('disconnect wallet')
     } else {
       activate(injected, (error) => {
         if(/No Ethereum provider was found on window.ethereum/.test(error)) {
-          window.open('https://metamask.app.link/dapp/192.168.200.95:3000/');
+          window.open(`https://metamask.app.link/dapp/${process.env.NEXT_PUBLIC_DEEP_LINK}/`);
         }
       })
     }
