@@ -15,12 +15,13 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+button {
+  height: 30px;
+  font-size: 15px;
+  color: #0A0B0B;
+  background: #FF9500;
+  border: none;
+  border-radius: 6px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
